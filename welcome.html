@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEEPTH CREATION | Gateway Protocol</title>
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Terminal Sci-fi Font -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="welcome.css">
+
+    <style>
+        /* Force cursor hide over body if we use custom cursor */
+        body.welcome-page {
+            cursor: none;
+        }
+
+        input,
+        button,
+        a {
+            cursor: none;
+        }
+    </style>
+</head>
+
+<body class="welcome-page light-mode">
+
+    <!-- ==================== CINEMATIC VIDEO BACKGROUND ==================== -->
+    <div class="video-bg-wrapper">
+        <video autoplay muted loop playsinline class="cinematic-video" id="bg-video">
+            <!-- ضع المسار الصحيح للفيديو الخاص بك هنا -->
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+        <!-- The glass blur overlay on top of the video -->
+        <div class="video-glass-overlay"></div>
+    </div>
+
+    <!-- ==================== THE CUSTOM CURSOR ==================== -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- ==================== BACKGROUND ENGINE ==================== -->
+    <div class="glass-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="welcome-patterns">
+        <img src="images/الحلزونة.png" class="pattern-spiral" alt="">
+        <img src="images/1BB.png" class="pattern-parallax pattern-1bb" data-speed="2" alt="">
+        <img src="images/2BB.png" class="pattern-parallax pattern-2bb" data-speed="-1.5" alt="">
+    </div>
+
+    <!-- ==================== CYBER ARCHITECTURE WIDGETS ==================== -->
+
+    <!-- Top Configuration Header -->
+    <header class="cyber-header">
+        <div class="cyber-header-left">
+            <span class="cyber-status-dot"></span>
+            <span class="cyber-mono">SYSTEM: ONLINE</span>
+        </div>
+        <div class="cyber-header-center">
+            <span class="cyber-version">DEEPTH CREATION_V2.0</span>
+        </div>
+        <div class="cyber-header-right">
+            <span class="cyber-mono" id="cyber-time">00:00:00</span>
+        </div>
+    </header>
+
+    <!-- Left Data Panel (Decorative) -->
+    <aside class="cyber-panel panel-left">
+        <div class="panel-box">
+            <div class="panel-title">ENV METRICS</div>
+            <div class="panel-data">
+                <span>FPS:</span> <span class="data-highlight">144.0</span>
+            </div>
+            <div class="panel-data">
+                <span>PING:</span> <span class="data-highlight">12ms</span>
+            </div>
+            <div class="panel-data">
+                <span>V-SYNC:</span> <span>ACTIVE</span>
+            </div>
+        </div>
+
+        <div class="panel-bars">
+            <div class="cyber-bar">
+                <div class="bar-fill s1"></div>
+            </div>
+            <div class="cyber-bar">
+                <div class="bar-fill s2"></div>
+            </div>
+            <div class="cyber-bar">
+                <div class="bar-fill s3"></div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Right Data Panel (Decorative) -->
+    <aside class="cyber-panel panel-right">
+        <div class="panel-box">
+            <div class="panel-title">USER AUTH</div>
+            <div class="panel-data">
+                <span>PROTOCOL:</span> <span class="data-highlight">OMQ-7</span>
+            </div>
+            <div class="panel-data">
+                <span>TARGET:</span> <span>INDEX.HTML</span>
+            </div>
+            <div class="panel-data">
+                <span>MODE:</span> <span class="data-highlight">LIGHT</span>
+            </div>
+        </div>
+
+        <div class="cyber-radar">
+            <div class="radar-scan"></div>
+        </div>
+    </aside>
+
+    <!-- Bottom Footer Elements -->
+    <footer class="cyber-footer">
+        <div class="footer-line">
+            <svg viewBox="0 0 400 20" class="svg-line">
+                <polyline points="0,10 150,10 160,2 240,2 250,10 400,10"></polyline>
+            </svg>
+        </div>
+        <div class="footer-text cyber-mono">SECURE CONNECTION ESTABLISHED // WAITING FOR USER INPUT</div>
+    </footer>
+
+    <!-- ==================== MAIN WELCOME STAGE ==================== -->
+    <div class="welcome-screen" id="welcome-screen">
+
+        <!-- Stable Glass Card (No Tilt, pure 3D layered CSS depth) -->
+        <div class="welcome-card" id="welcome-card">
+
+            <!-- Hardware Accelerated Logos -->
+            <div class="welcome-logos">
+                <div class="welcome-logo-item hover-target">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                        alt="Photoshop">
+                </div>
+
+                <div class="welcome-logo-main hover-target" id="main-logo">
+                    <img src="images/logo.png" alt="DEEPTH CREATION">
+                    <svg class="welcome-sparkle" width="32" height="32" viewBox="0 0 24 24"
+                        fill="var(--glow-color, #00D4A5)">
+                        <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                    </svg>
+                </div>
+
+                <div class="welcome-logo-item hover-target">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
+                        alt="Illustrator">
+                </div>
+            </div>
+
+            <!-- Typography Component -->
+            <h1 class="welcome-title">Welcome</h1>
+            <p class="welcome-subtitle">Identify yourself to initialize the creative rendering engine.</p>
+
+            <!-- Authentication Form -->
+            <form id="welcome-form" class="welcome-form">
+                <div class="welcome-input-wrapper hover-target">
+                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <!-- Focus hover target integrated -->
+                    <input type="text" id="visitor-name-input" placeholder="Enter Call Sign / Name..." required
+                        autocomplete="off">
+                </div>
+
+                <button type="submit" class="welcome-btn hover-target" id="enter-btn">
+                    <span class="btn-text">INITIALIZE SEQUENCE</span>
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Small Security Text -->
+            <div class="card-security-label cyber-mono">ENCRYPTED PORTAL // OMQ STUDIOS</div>
+        </div>
+
+        <!-- ==================== SUCCESS / LOADING OVERLAY ==================== -->
+        <div class="welcome-success" id="welcome-success">
+            <div class="success-icon-wrapper">
+                <div class="success-ring"></div>
+                <div class="success-ring two"></div>
+                <svg class="success-icon" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24"
+                    fill="none" stroke="#00D4A5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+
+            <h2 class="success-title">Access Granted, <span id="success-name" class="success-name"></span></h2>
+            <p class="success-subtitle">Routing your connection to the main grid...</p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+
+            <!-- Matrix/Hack Loader Lines -->
+            <div class="loading-matrix cyber-mono">
+                <div class="matrix-line">Compiling UI Assets... [DONE]</div>
+                <div class="matrix-line" style="animation-delay:0.3s">Syncing User Data... [DONE]</div>
+                <div class="matrix-line" style="animation-delay:0.6s">Establishing Bridge... [ACTIVE]</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== GATEWAY LOGIC & PHYSICS ==================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const card = document.getElementById("welcome-card");
+            const form = document.getElementById("welcome-form");
+            const nameInput = document.getElementById("visitor-name-input");
+            const enterBtn = document.getElementById("enter-btn");
+            const successScreen = document.getElementById("welcome-success");
+            const successName = document.getElementById("success-name");
+            const progressFill = document.getElementById("progress-fill");
+            const parallaxPatterns = document.querySelectorAll('.pattern-parallax');
+
+            /* ==================================================
+               1. CUSTOM MOUSE CURSOR LOGIC (Highly Responsive)
+               ================================================== */
+            const cursorDot = document.getElementById("cursor-dot");
+            const cursorOutline = document.getElementById("cursor-outline");
+
+            let mouseX = window.innerWidth / 2;
+            let mouseY = window.innerHeight / 2;
+            let outlineX = mouseX;
+            let outlineY = mouseY;
+
+            // Track mouse accurately
+            window.addEventListener("mousemove", (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+
+                // Instant dot update
+                cursorDot.style.left = `${mouseX}px`;
+                cursorDot.style.top = `${mouseY}px`;
+
+                // Subtle pattern offset
+                const xMap = (window.innerWidth - mouseX * 2) / 100;
+                const yMap = (window.innerHeight - mouseY * 2) / 100;
+                parallaxPatterns.forEach(pattern => {
+                    const speed = pattern.getAttribute('data-speed') || 1;
+                    pattern.style.transform = `translate(${xMap * speed * 2}px, ${yMap * speed * 2}px)`;
+                });
+            });
+
+            // Smooth outline trailing physics
+            const animateCursor = () => {
+                const dx = mouseX - outlineX;
+                const dy = mouseY - outlineY;
+
+                outlineX += dx * 0.15; // Smoothness factor
+                outlineY += dy * 0.15;
+
+                cursorOutline.style.left = `${outlineX}px`;
+                cursorOutline.style.top = `${outlineY}px`;
+
+                requestAnimationFrame(animateCursor);
+            };
+            requestAnimationFrame(animateCursor);
+
+            // Hover logic for all interaction elements
+            const hoverTargets = document.querySelectorAll('.hover-target, button, input');
+            hoverTargets.forEach(target => {
+                target.addEventListener('mouseenter', () => {
+                    cursorOutline.classList.add('cursor-hovering');
+                    cursorDot.classList.add('cursor-hovering');
+                });
+                target.addEventListener('mouseleave', () => {
+                    cursorOutline.classList.remove('cursor-hovering');
+                    cursorDot.classList.remove('cursor-hovering');
+                });
+            });
+
+            /* ==================================================
+               2. WIDGET CLOCK (Cyber Time)
+               ================================================== */
+            const clockEl = document.getElementById('cyber-time');
+            setInterval(() => {
+                const d = new Date();
+                clockEl.textContent = d.toTimeString().split(' ')[0]; // Gets HH:MM:SS
+            }, 1000);
+
+            /* ==================================================
+               3. MAGNETIC BUTTON (Micro-Interaction Maintained)
+               ================================================== */
+            enterBtn.addEventListener("mousemove", (e) => {
+                const rect = enterBtn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                enterBtn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+            });
+
+            enterBtn.addEventListener("mouseleave", () => {
+                enterBtn.style.transform = `translate(0, 0)`;
+            });
+
+            // Input focus organic lift
+            nameInput.addEventListener("focus", () => {
+                nameInput.parentElement.style.transform = "scale(1.02) translateY(-2px)";
+            });
+            nameInput.addEventListener("blur", () => {
+                nameInput.parentElement.style.transform = "scale(1) translateY(0)";
+            });
+
+            /* ==================================================
+               4. FORM SUBMISSION & SUCCESS SEQUENCE
+               ================================================== */
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const name = nameInput.value.trim();
+                if (!name) return;
+
+                // Save securely
+                localStorage.setItem('visitorName', name);
+                successName.textContent = name;
+
+                // 1. Implode the static card softly
+                card.style.transition = "all 0.8s cubic-bezier(0.65, 0, 0.35, 1)";
+                card.style.opacity = "0";
+                card.style.transform = "scale(0.9) translateY(40px)";
+
+                // Hide side panels
+                document.querySelectorAll('.cyber-panel, .cyber-header, .cyber-footer').forEach(el => {
+                    el.style.opacity = "0";
+                    el.style.transform = "scale(0.95)";
+                });
+
+                // 2. Spawn the success interface
+                setTimeout(() => {
+                    card.style.display = "none";
+                    successScreen.classList.add("active");
+
+                    // 3. Fill the tactical progress bar
+                    setTimeout(() => {
+                        progressFill.style.width = "100%";
+                    }, 400);
+
+                    // 4. Whiteout flash & Redirect
+                    setTimeout(() => {
+                        document.body.style.transition = "opacity 0.8s ease-out, background 0.8s ease-out";
+                        document.body.style.opacity = "0";
+
+                        setTimeout(() => {
+                            window.location.href = "index.html";
+                        }, 800);
+                    }, 2400); // Wait for matrix lines to finish
+                }, 600);
+            });
+        });
+    </script>
+</body>
+
+</html>
